@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pprqqi8qbygu"
-path="res://.godot/imported/TX FX Torch Flame.png-4424595a6c681e55e3c99977fb214c97.ctex"
+uid="uid://ckcd0j7i1u8xt"
+path="res://.godot/imported/TX Tileset Ground.png-9014ec4a349aefa2b2a8a29723b46b27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TX FX Torch Flame.png"
-dest_files=["res://.godot/imported/TX FX Torch Flame.png-4424595a6c681e55e3c99977fb214c97.ctex"]
+source_file="res://assets/sprite/TX Tileset Ground.png"
+dest_files=["res://.godot/imported/TX Tileset Ground.png-9014ec4a349aefa2b2a8a29723b46b27.ctex"]
 
 [params]
 
