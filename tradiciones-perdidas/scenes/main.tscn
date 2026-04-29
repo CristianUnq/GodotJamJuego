@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://5gjevsvvuko0"]
+
+[ext_resource type="PackedScene" uid="uid://ddql7jyom53ar" path="res://scenes/character_body_2d.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://byknjuo8bcrgl" path="res://scenes/object.tscn" id="2_0wfyh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
+distance = -111.0
+
+[node name="Main" type="Node2D" unique_id=589801518]
+
+[node name="CharacterBody2D" parent="." unique_id=1015952309 instance=ExtResource("1_o5qli")]
+position = Vector2(147, 391)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=286849057]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=353768770]
+position = Vector2(70, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1741742101]
+shape = SubResource("WorldBoundaryShape2D_0xm2m")
+
+[node name="Object" parent="." unique_id=579737070 instance=ExtResource("2_0wfyh")]
+position = Vector2(270, 551)
+
+[node name="Object2" parent="." unique_id=1468653198 instance=ExtResource("2_0wfyh")]
+position = Vector2(1109, 532)
+
+[node name="Object3" parent="." unique_id=2066003908 instance=ExtResource("2_0wfyh")]
+position = Vector2(883, 492)
+
+[node name="Object4" parent="." unique_id=893956957 instance=ExtResource("2_0wfyh")]
+position = Vector2(697, 553)
+
+[node name="Object5" parent="." unique_id=44374150 instance=ExtResource("2_0wfyh")]
+position = Vector2(508, 542)
