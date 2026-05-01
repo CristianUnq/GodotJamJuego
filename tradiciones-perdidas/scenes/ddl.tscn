@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://du0updtkn5w7"]
+
+[ext_resource type="Script" uid="uid://ph5pb56yiugo" path="res://scripts/object.gd" id="1_4sjxu"]
+[ext_resource type="Texture2D" uid="uid://co6anggopgtir" path="res://assets/sprite/ecos/comida/ddl-03.png" id="2_4sjxu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egkf8"]
+size = Vector2(14, 17.5)
+
+[node name="ddl" type="Area2D" unique_id=579737070]
+position = Vector2(3, 0)
+script = ExtResource("1_4sjxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332106472]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_egkf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1001463629]
+texture = ExtResource("2_4sjxu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://3p2yynilq3cs"]
+
+[ext_resource type="Script" uid="uid://ph5pb56yiugo" path="res://scripts/object.gd" id="1_fm0as"]
+[ext_resource type="Texture2D" uid="uid://cv2inaefd4p4j" path="res://assets/sprite/ecos/comida/pastafrola.png" id="2_fm0as"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egkf8"]
+size = Vector2(40, 17)
+
+[node name="pastafrola" type="Area2D" unique_id=579737070]
+position = Vector2(3, 0)
+script = ExtResource("1_fm0as")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332106472]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_egkf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1001463629]
+position = Vector2(1.000001, 0)
+scale = Vector2(1.2500001, 1)
+texture = ExtResource("2_fm0as")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

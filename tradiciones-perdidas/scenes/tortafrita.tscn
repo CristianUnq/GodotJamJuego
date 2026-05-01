@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b1oatqg5onw1b"]
+
+[ext_resource type="Script" uid="uid://ph5pb56yiugo" path="res://scripts/object.gd" id="1_0yqq0"]
+[ext_resource type="Texture2D" uid="uid://cm3brociharm7" path="res://assets/sprite/ecos/comida/milanga.png" id="2_0yqq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egkf8"]
+size = Vector2(40, 16)
+
+[node name="tortafrita" type="Area2D" unique_id=579737070]
+position = Vector2(3, 0)
+script = ExtResource("1_0yqq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332106472]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_egkf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1001463629]
+position = Vector2(1.0000002, -1.1920929e-07)
+scale = Vector2(1.3333334, 1.4545455)
+texture = ExtResource("2_0yqq0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

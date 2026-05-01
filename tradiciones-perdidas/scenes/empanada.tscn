@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bn7m3l2fvs6rx"]
+
+[ext_resource type="Script" uid="uid://ph5pb56yiugo" path="res://scripts/object.gd" id="1_wpray"]
+[ext_resource type="Texture2D" uid="uid://cvhikq1yeeeyq" path="res://assets/sprite/ecos/comida/empanada.png" id="2_wpray"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egkf8"]
+size = Vector2(24, 16)
+
+[node name="empanada" type="Area2D" unique_id=579737070]
+position = Vector2(3, 0)
+script = ExtResource("1_wpray")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332106472]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_egkf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1001463629]
+position = Vector2(0.9999995, 0)
+scale = Vector2(1.5, 1)
+texture = ExtResource("2_wpray")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
