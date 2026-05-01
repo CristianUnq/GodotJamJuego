@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ged85dy08cuh" path="res://scenes/asado.tscn" id="7_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://b1oatqg5onw1b" path="res://scenes/tortafrita.tscn" id="8_trceg"]
 [ext_resource type="Script" uid="uid://b51w3xvxhmg00" path="res://scripts/killzone.gd" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://2162cd7556no" path="res://scenes/paralax.tscn" id="11_ya4ey"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
 texture = ExtResource("3_sugp2")
@@ -1466,6 +1467,8 @@ size = Vector2(24, 824)
 size = Vector2(8410, 20)
 
 [node name="Main" type="Node2D" unique_id=589801518]
+
+[node name="Paralax" parent="." unique_id=669170177 instance=ExtResource("11_ya4ey")]
 
 [node name="CharacterBody2D" parent="." unique_id=1015952309 instance=ExtResource("1_o5qli")]
 position = Vector2(-344, 632)
