@@ -1,4 +1,5 @@
 extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
-	self.queue_free()
+	if body is CharacterBody2D:
+		self.queue_free()
