@@ -22,7 +22,12 @@ func physics_update(delta: float) -> void:
 		# Si soltaron la tecla, volvemos a Idle
 		transitioned.emit(self, "idle")
 
-	if Input.is_action_just_pressed("ui_accept") and player.is_on_floor():
+	if Input.is_action_just_pressed("jump") and player.is_on_floor():
 		transitioned.emit(self, "jump")
+		
+	# Si apretamos para abajo y estamos tocando el piso...
+	if Input.is_action_pressed("move_down") and player.is_on_floor():
+		transitioned.emit(self, "crouch")
+		return # Cortamos la ejecución para que no haga nada más
 
 	player.move_and_slide()
